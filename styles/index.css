@@ -169,7 +169,11 @@ button#info:hover, button#help:hover {
 /* DICA */
 #tip {
     position: relative;
-    background-color: rgb(24, 24, 24);
+    background: rgba(24, 24, 24, 0.75);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.1px);
+    -webkit-backdrop-filter: blur(6.1px);
+    border: 1px solid rgba(24, 24, 24, 0.88);
     border-radius: 5px;
     padding: 10px;
     width: 50%;
@@ -249,7 +253,11 @@ button#info:hover, button#help:hover {
 
 /* SE A RESPOSTA FOR ERRADA */
 .wrongTry {
-    background-color: rgb(85, 85, 85);
+    background: rgba(85, 85, 85, 0.68);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.4px);
+    -webkit-backdrop-filter: blur(6.4px);
+    border: 1px solid rgba(85, 85, 85, 0.88);
     padding: 10px;
     border-radius: 5px;
     overflow: hidden;
