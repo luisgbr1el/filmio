@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Filmio</title>
+        <meta lang="pt-BR">
+        <meta charset="UTF-8">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+        <link rel="manifest" href="/assets/site.webmanifest">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="luisgbr1el">
+        <meta name="description" content="Descubra o filme usando as dicas dadas pelo jogo. Você precisa acertar dentro das 5 tentativas.">
+        <meta property="og:image" content="https://i.ibb.co/DW1pmjt/android-chrome-512x512.png">
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/responsivity.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <noscript>Essa página infelizmente não funciona sem os scripts. :(</noscript>
+        <div id="modal">
+            <div id="helpMenu">
+                <div id="headHelper">
+                    <button id="close"><i class="fa-solid fa-x"></i></button>
+                </div>
+                <p>Descubra o filme.</p>
+                <p>Usando as dicas dadas pelo jogo, você precisa acertar dentro das 5 tentativas.</p>
+                <p>Nem sempre todas as dicas são associadas às respostas.</p>
+            </div>
+        </div>
+
+        <div id="modal2">
+            <div id="creditsMenu">
+                <div id="headHelper">
+                    <button id="close2"><i class="fa-solid fa-x"></i></button>
+                </div>
+                <p>Desenvolvido por: <a class="menuA" href="https://twitter.com/luisgbr1el" target="_blank">@luisgbr1el <i class="fa-brands fa-twitter"></i></a></p>
+                <p>Inspirado por <a class="menuA" href="https://term.ooo" target="_blank">Termo</a>, <a class="menuA" href="https://contexto.me" target="_blank">Contexto</a>, <a class="menuA" href="https://framed.wtf" target="_blank">Framed</a> e <a class="menuA" href="https://plotwords.com" target="_blank">Plotwords</a>.</p>
+            </div>
+        </div>
+
+        <div class="main">
+            <div id="alerts">
+                <!-- TODOS OS ALERTAS SERÃO MOSTRADOS AQUI -->
+            </div>
+            <div id="head">
+                <button id="help" onclick="help();"><i class="fa-regular fa-circle-question"></i></button>
+                <p id="title"><i class="fa-solid fa-film"></i> FILMIO</p>
+                <button id="info" onclick="credits();"><i class="fa-solid fa-info"></i></button>
+            </div>
+
+            <div id="screen">
+                <h3 id="gameNumber" style="left: 10%; transform: translateX(-38%); margin: 0; font-weight: normal;"></h3>
+                <p id="tipsText">DICAS</p>
+
+                <div id="tips">
+                    <!-- AS DICAS SERÃO MOSTRADAS AQUI -->
+                </div>
+
+                <p id="guessTry">TENTATIVAS RESTANTES: </p>
+
+                <input id="guess" list="movies" name="movie" placeholder="Digite um filme...">
+                <datalist id="movies">
+                </datalist>
+                <button id="send" onclick="guess();">Enviar</button>
+            </div>
+
+            <div id="tries">
+                <p id="tipsText">TENTATIVAS</p>
+                <!-- AS TENTATIVAS SERÃO MOSTRADAS AQUI -->
+            </div>
+        </div>
+    </body>
+    <script src="scripts/movie.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        if (!navigator.serviceWorker.controller) {
+            navigator.serviceWorker.register("/sw.js").then(function(reg) {
+                console.log("Service worker has been registered for scope: " + reg.scope);
+            });
+        }
+    </script>
+</html>

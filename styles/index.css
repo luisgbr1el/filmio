@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+/* CORPO DA PÁGINA */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(49, 49, 49);
+    color: rgb(224, 224, 224);
+    font-family: 'Rubik', sans-serif;
+}
+
+/* TELA DO JOGO */
+.main {
+    width: 35%;
+    margin: 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* CABEÇALHO DA TELA DO JOGO */
+#head {
+    /* border-bottom: 2px solid rgba(224, 224, 224, 0.76); */
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 16pt;
+}
+
+/* BOTÃO HELP DO CABEÇALHO */
+#head button#help {
+    color: rgb(224, 224, 224);
+    position: absolute;
+    left: 10px;
+}
+
+/* BOTÃO INFO DO CABEÇALHO */
+#head button#info {
+    color: rgb(224, 224, 224);
+    position: absolute;
+    right: 7px;
+}
+
+/* MODALS PARA MOSTRAR AS SUBTELAS DE HELP E INFO */
+#modal, #modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.11); /* Black w/ opacity */
+}
+
+/* ALERTAS */
+.alert {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1%;
+    width: 80%; /* Full width */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgb(32, 32, 32); /* Black w/ opacity */
+    animation: in-alert-animation .3s linear;
+    font-size: 14pt;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid rgb(224, 224, 224);
+}
+
+/* BOTÕES PARA FECHAR AS SUBTELAS */
+button#close, button#close2 {
+    color: rgb(224, 224, 224);
+    border: 2px solid rgb(224, 224, 224) !important;
+    border-radius: 50%;
+    font-size: 15pt !important;
+    font-weight: bolder;
+    position: absolute;
+    left: 90%;
+    top: 10%;
+}
+
+/* LINKS DAS SUBTELAS */
+.menuA {
+    color: rgb(224, 224, 224);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/* SUBTELAS DE HELP E CREDITS */
+#helpMenu, #creditsMenu {
+    margin: 0;
+    position: fixed;
+    font-weight: normal;
+    overflow: auto;
+    font-size: 13pt;
+    padding: 5px 20px 10px 20px;
+    background-color: rgb(24, 24, 24);
+    left: 50%;
+    top: 30%;
+    text-align: left;
+    width: 30%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 2px solid rgb(224, 224, 224);
+}
+
+/* TÍTULO DO JOGO */
+#title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 13px;
+    margin: 0;
+    font-size: 20pt;
+}
+
+/* BOTÕES PARA ABRIR E FECHAR AS SUBTELAS */
+button#info, button#help, button#close, button#close2 {
+    background-color: transparent;
+    border: none;
+    font-size: 18pt;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+/* AO PASSAR O MOUSE POR CIMA DO BOTAO DE INFO E HELP */
+button#info:hover, button#help:hover {
+    background-color: rgb(61, 61, 61);
+    border-radius: 50%;
+}
+
+/* TELA DAS DICAS */
+#screen {
+    top: 50px;
+    position: relative;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* DIV DAS DICAS */
+#tips {
+    text-align: center;
+    position: relative;
+    font-weight: bolder;
+}
+
+/* TEXTO DAS DICAS */
+#tipsText {
+    font-weight: bolder;
+    font-size: 14pt;
+    letter-spacing: 1px;
+}
+
+/* DICA */
+#tip {
+    position: relative;
+    background-color: rgb(24, 24, 24);
+    border-radius: 5px;
+    padding: 10px;
+    width: 50%;
+    left: 50%;
+    margin: 0;
+    margin-bottom: 10px;
+    transform: translateX(-50%);
+}
+
+/* INPUT PARA RECEBER A RESPOSTA */
+#guess {
+    width: 90%;
+    background-color: rgb(24, 24, 24);
+    border: 2px solid rgb(224, 224, 224);
+    border-radius: 5px;
+    padding: 15px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bolder;
+    font-size: 16pt;
+    color: rgb(224, 224, 224);
+    outline: none;
+}
+
+/* BOTÃO PARA ENVIAR RESPOSTA */
+#send {
+    background-color: rgb(24, 24, 24);
+    border: none;
+    outline: none;
+    color: rgb(224, 224, 224);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 13pt;
+    margin-top: 10px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+/* AO PASSAR O MOUSE POR CIMA DO BOTÃO DE ENVIAR RESPOSTA */
+#send:hover {
+    background-color: rgb(36, 36, 36);
+    transition: 0.15s;
+}
+
+/* BOTÃO DE COMPARTILHAR */
+#share {
+    background-color: rgb(51, 51, 51);
+    border: none;
+    outline: none;
+    color: rgb(224, 224, 224);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 13pt;
+    margin-top: 10px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+/* AO PASSAR O MOUSE POR CIMA DO BOTÃO DE COMPARTILHAR */
+#share:hover {
+    background-color: rgb(19, 19, 19);
+    transition: 0.15s;
+}
+
+/* DIV DE TENTATIVAS DO JOGADOR */
+#tries {
+    position: relative;
+    margin-top: 80px;
+    text-align: center;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* SE A RESPOSTA FOR ERRADA */
+.wrongTry {
+    background-color: rgb(85, 85, 85);
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* SE FOR A RESPOSTA CERTA */
+.correctTry {
+    background-color: rgb(0, 145, 36);
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* ATRIBUIR ANIMAÇÃO PARA UMA NOVA TENTATIVA */
+.newTry {
+    animation: append-animate .3s linear;
+}
+
+/* DIV PARA COMPARTILHAMENTO CASO O JOGADOR ACERTE */
+.correctAnswer {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background-color: rgb(34, 34, 34);
+    padding: 20px 10px 20px 10px;
+    border-radius: 5px;
+}
+
+/* ANIMAÇÃO PARA NOVAS TENTATIVAS */
+@keyframes append-animate {
+	from {
+		transform: scaleY(0);
+		opacity: 0;
+	}
+	to {
+		transform: scaleY(1);
+		opacity: 1;
+	}
+}
+
+/* ANIMAÇÃO PARA A ENTRADA DO ALERT */
+@keyframes in-alert-animation {
+	from {
+        top: -20%;
+		transform: scaleY(0);
+		opacity: 0;
+        transform: translateX(-50%);
+        display: block;
+	}
+	to {
+        opacity: 1;
+	}
+}

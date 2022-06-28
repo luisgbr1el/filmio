@@ -1,0 +1,23 @@
+{
+    "name":"Filmio",
+    "short_name":"Filmio",
+    "start_url": "/",
+    "icons":[
+        {
+            "src":"android-chrome-192x192.png",
+            "sizes":"192x192",
+            "type":"image/png"
+        },
+        {
+            "src":"android-chrome-512x512.png",
+            "sizes":"512x512",
+            "type":"image/png"
+        }
+    ],
+    "theme_color":"#313131",
+    "background_color":"#313131",
+    "display":"standalone",
+    "scope": "/",
+    "description": "Descubra o filme usando as dicas dadas pelo jogo. Você precisa acertar dentro das 5 tentativas",
+    "orientation": "portrait"
+}
