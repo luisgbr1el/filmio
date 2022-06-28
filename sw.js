@@ -3,7 +3,7 @@ self.addEventListener("install", function(event) {
   });
   
   var preLoad = function(){
-    console.log("Installing web app");
+    //console.log("Installing web app");
   };
   
   self.addEventListener("fetch", function(event) {
@@ -29,7 +29,7 @@ self.addEventListener("install", function(event) {
 var addToCache = function(request){
   return caches.open("offline").then(function (cache) {
     return fetch(request).then(function (response) {
-      console.log(response.url + " was cached");
+      //console.log(response.url + " was cached");
       return cache.put(request, response);
     });
   });
