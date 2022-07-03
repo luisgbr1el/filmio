@@ -1,5 +1,7 @@
-const tips = [ 'disney', '2022', 'amarelo', 'terror', 'ação' ];
+const tips = [ 'tarantino', 'ação', 'globo', 'romance', 'lançado em 05/05/2022' ];
+
 const movies = [ "The Tender Bar", "Pânico 5", "Hotel Transilvânia: Transformonstrão", "The Tragedy of Macbeth", "As Agentes 355", "O Beco do Pesadelo", "Spencer", "Moonfall Ameaça Lunar", "Morte no Nilo", "Case Comigo", "Sempre em Frente", "Uncharted", "Licorice Pizza", "O Massacre da Serra Elétrica: O Retorno de Leatherface", "Mães Paralelas", "Batman", "Belfast", "Red Crescer é uma Fera", "O Projeto Adam", "Os Caras Malvados", "Ambulância: Um Dia de Crime", "Esquema de Risco: Operação Fortune", "Everything Everywhere All At Once", "Morbius", "Cyrano", "Sonic 2", "Animais Fantásticos: Os Segredos de Dumbledore", "Medida Provisória", "Cidade Perdida", "Downton Abbey 2: Uma Nova Era", "Doutor Estranho no Multiverso da Loucura", "O Homem do Norte", "O Peso do Talento", "Top Gun Maverick ", "Jurassic World: Domínio", "Lightyear", "O Telefone Preto", "Tudo em Todo o Lugar ao Mesmo Tempo", "Minions 2: A Origem de Gru", "Thor: Amor e Trovão", "Elvis", "Não! Não olhe!", "DC Liga dos Super Pets", "Trem-Bala", "Não Se Preocupe, Querida", "Halloween Ends", "Adão Negro", "Pantera Negra: Wakanda Forever", "Creed 3", "The Fabelmans", "Avatar: The Way of Water", "Shazam: Fúria dos Deuses", "Strange World ", "Babylon", "Aquaman e o Reino Perdido", "John Wick 4", "Homem-Aranha Através do Aranhaverso", "The Flash", "Missão: Impossível 7" ];
+
 const gameNumber = 1;
 
 document.getElementById("gameNumber").innerHTML = `<b>JOGO:</b> #${gameNumber}`;
@@ -30,8 +32,9 @@ guessNumber.innerHTML = "TENTATIVAS RESTANTES: " + guessTries;
 
     moviesDiv = document.getElementById("movies");
     let movie = '';
-
+  
     // Listar todos os filmes disponíveis
+    console.log(movies);
     for (i = 0; i < movies.length; i++) {
         movie += `<option>${movies[i]}</option>`;
     }
